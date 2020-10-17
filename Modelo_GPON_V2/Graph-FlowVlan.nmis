@@ -1,0 +1,38 @@
+%hash = (
+  'title' => {
+      'standard' => '$node - $length from $datestamp_start to $datestamp_end',
+      'short' => 'Flow Para and Vlan Id'
+      },
+      'vlabel' => {
+      'standard' => 'Flow_Para / Vlan_Id',
+      },
+
+	'option' => {
+		  'standard' => [
+          'DEF:MultiSerUserPara=$database:MultiSerUserPara:AVERAGE',
+          'DEF:hwExtSrvFlowVlanid=$database:hwExtSrvFlowVlanid:AVERAGE',
+          'AREA:MultiSerUserPara#b91225:Flow Para',
+
+          'GPRINT:MultiSerUserPara:AVERAGE:Avg. %1.2lf\t',
+          'GPRINT:MultiSerUserPara:MAX:Max %1.2lf\t\\n',
+          
+          'LINE2:hwExtSrvFlowVlanid#0000ff:Vlan Id',
+          'GPRINT:hwExtSrvFlowVlanid:AVERAGE:Avg. %1.2lf\t',
+          
+          'GPRINT:hwExtSrvFlowVlanid:MAX:Max %1.2lf\t\\n',
+		    ],
+		  'small' => [
+          'DEF:MultiSerUserPara=$database:MultiSerUserPara:AVERAGE',
+          'DEF:hwExtSrvFlowVlanid=$database:hwExtSrvFlowVlanid:AVERAGE',
+          'AREA:MultiSerUserPara#b91225:Flow Para',
+
+          'GPRINT:MultiSerUserPara:AVERAGE:Avg. %1.2lf\t',
+          'GPRINT:MultiSerUserPara:MAX:Max %1.2lf\t\\n',
+          
+          'LINE2:hwExtSrvFlowVlanid#0000ff:Vlan Id',
+          'GPRINT:hwExtSrvFlowVlanid:AVERAGE:Avg. %1.2lf\t',
+          
+          'GPRINT:hwExtSrvFlowVlanid:MAX:Max %1.2lf\t\\n',
+		    ]
+	     }
+);

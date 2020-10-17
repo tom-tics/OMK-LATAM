@@ -1,0 +1,30 @@
+%hash = (
+	'title' => {
+		'standard' => '$node - $length from $datestamp_start to $datestamp_end',
+		'short' => '$node - $length'
+	},
+	'vlabel' => {
+		'standard' => 'Flow Oper-Admin Status',
+		'short' => 'Oper-Admin Status'
+	},
+	'option' => {
+		'standard' => [
+			'DEF:EFlowAdminStatus=$database:EFlowAdminStatus:AVERAGE',
+			'DEF:EFlowOperStatus=$database:EFlowOperStatus:AVERAGE',
+			'AREA:EFlowAdminStatus#FFBD00:Flow Admin Status',
+			'GPRINT:EFlowAdminStatus:MAX:Max %1.0lf\t\n',
+			'LINE3:EFlowOperStatus#00FF42:Flow Oper Status',
+			'GPRINT:EFlowOperStatus:MAX:Max %1.0lf\t\n',
+			'COMMENT: True(1) False(2)',
+		],
+		'small' => [
+			'DEF:EFlowAdminStatus=$database:EFlowAdminStatus:AVERAGE',
+			'DEF:EFlowOperStatus=$database:EFlowOperStatus:AVERAGE',
+			'AREA:EFlowAdminStatus#FFBD00:Flow Admin Status',
+			'GPRINT:EFlowAdminStatus:MAX:Max %1.0lf\t\n',
+			'LINE3:EFlowOperStatus#00FF42:Flow Oper Status',
+			'GPRINT:EFlowOperStatus:MAX:Max %1.0lf\t\n',
+			'COMMENT: True(1) False(2)',
+		]
+	}
+);

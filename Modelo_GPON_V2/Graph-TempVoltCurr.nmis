@@ -1,0 +1,44 @@
+%hash = (
+	'title' => {
+		'standard' => '$node - $length from $datestamp_start to $datestamp_end',
+		'short' => '$node - $length'
+	},
+	'vlabel' => {
+		'standard' => 'TEMP - VOLT - BiasCurrent',
+		'short' => 'TEMP - VOLT - BCurrent'
+	},
+	'option' => {
+		'standard' => [
+			'DEF:GponOntOplDdmVolt=$database:GponOntOplDdmVolt:AVERAGE',
+			'DEF:GponOntOptDdmTem=$database:GponOntOptDdmTem:AVERAGE',
+			'DEF:GponOntDdmBiasCurr=$database:GponOntDdmBiasCurr:AVERAGE',
+			'AREA:GponOntOplDdmVolt#2EFAE7:ONTVoltage',
+			'GPRINT:GponOntOplDdmVolt:MIN:Min. %2.2lf\t',
+			'GPRINT:GponOntOplDdmVolt:MAX:Max %2.2lf\t\n',
+
+			'LINE2:GponOntOptDdmTem#FFB813:ONTTemp',
+			'GPRINT:GponOntOptDdmTem:MIN:Min. %3.1lf\t',
+			'GPRINT:GponOntOptDdmTem:MAX:Max %3.1lf\t\n',
+      
+			'LINE2:GponOntDdmBiasCurr#001FFF:ONT Bias Current',
+			'GPRINT:GponOntDdmBiasCurr:LAST:Last. %3.1lf\t',
+			'GPRINT:GponOntDdmBiasCurr:MAX:Max %3.1lf\t\n',	
+		],
+		'small' => [
+			'DEF:GponOntOplDdmVolt=$database:GponOntOplDdmVolt:AVERAGE',
+			'DEF:GponOntOptDdmTem=$database:GponOntOptDdmTem:AVERAGE',
+			'DEF:GponOntDdmBiasCurr=$database:GponOntDdmBiasCurr:AVERAGE',
+			'AREA:GponOntOplDdmVolt#2EFAE7:ONTVoltage',
+			'GPRINT:GponOntOplDdmVolt:MIN:Min. %2.2lf\t',
+			'GPRINT:GponOntOplDdmVolt:MAX:Max %2.2lf\t\n',
+
+			'LINE2:GponOntOptDdmTem#FFB813:ONTTemp',
+			'GPRINT:GponOntOptDdmTem:MIN:Min. %3.1lf\t',
+			'GPRINT:GponOntOptDdmTem:MAX:Max %3.1lf\t\n',
+      
+			'LINE2:GponOntDdmBiasCurr#001FFF:ONT Bias Current',
+			'GPRINT:GponOntDdmBiasCurr:LAST:Last. %3.1lf\t',
+			'GPRINT:GponOntDdmBiasCurr:MAX:Max %3.1lf\t\n',	
+		]
+	}
+);
