@@ -38,25 +38,26 @@
     },
     'option' => {
         'standard' => [
-            'DEF:GponOntOptlDdmTxP=$database:GponOntOptlDdmTxP:AVERAGE',
+            'DEF:GOntODdmTxPower=$database:GOntODdmTxPower:AVERAGE',
             'DEF:GponOntOlDdmRxP=$database:GponOntOlDdmRxP:AVERAGE',
 
             'CDEF:GponOntOlDdmRxP1=GponOntOlDdmRxP,-1,*',
-            'AREA:GponOntOptlDdmTxP#00FF7F:Receive Traffic',
             'GPRINT:GponOntOlDdmRxP:AVERAGE:Avg %6.2lf\\n',
             'AREA:GponOntOlDdmRxP1#ff0000:Rx Power',
-            'GPRINT:GponOntOptlDdmTxP:AVERAGE:Avg %6.2lf\\n',
+
+            'AREA:GOntODdmTxPower#00FF7F:Tx Power',
+            'GPRINT:GOntODdmTxPower:AVERAGE:Avg %6.2lf\\n',
         ],
         'small' => [
-            'DEF:GponOntOptlDdmTxP=$database:GponOntOptlDdmTxP:AVERAGE',
-            'DEF:GponOntOlDdmRxP=$database:GponOntOlDdmRxP:AVERAGE',
+        'DEF:GOntODdmTxPower=$database:GOntODdmTxPower:AVERAGE',
+        'DEF:GponOntOlDdmRxP=$database:GponOntOlDdmRxP:AVERAGE',
 
-            'CDEF:GponOntOlDdmRxP1=GponOntOlDdmRxP,-1,*',
-            'AREA:GponOntOptlDdmTxP#00FF7F:Receive Traffic',
-            'GPRINT:GponOntOlDdmRxP:AVERAGE:Avg %6.2lf\\n',
-            'AREA:GponOntOlDdmRxP1#ff0000:Rx Power',
-            'GPRINT:GponOntOptlDdmTxP:AVERAGE:Avg %6.2lf\\n',
+        'CDEF:GponOntOlDdmRxP1=GponOntOlDdmRxP,-1,*',
+        'GPRINT:GponOntOlDdmRxP:AVERAGE:Avg %6.2lf\\n',
+        'AREA:GponOntOlDdmRxP1#ff0000:Rx Power',
+
+        'AREA:GOntODdmTxPower#00FF7F:Tx Power',
+        'GPRINT:GOntODdmTxPower:AVERAGE:Avg %6.2lf\\n',
         ]
     }
     );
-

@@ -9,36 +9,36 @@
 	},
 	'option' => {
 		'standard' => [
-			'DEF:GponOntOplDdmVolt=$database:GponOntOplDdmVolt:AVERAGE',
-			'DEF:GponOntOptDdmTem=$database:GponOntOptDdmTem:AVERAGE',
-			'DEF:GponOntDdmBiasCurr=$database:GponOntDdmBiasCurr:AVERAGE',
-			'AREA:GponOntOplDdmVolt#2EFAE7:ONTVoltage',
-			'GPRINT:GponOntOplDdmVolt:MIN:Min. %2.2lf\t',
-			'GPRINT:GponOntOplDdmVolt:MAX:Max %2.2lf\t\n',
+			'DEF:GponOntODdmVoltage=$database:GponOntODdmVoltage:AVERAGE',
+			'DEF:GOntOpticalDdmTem=$database:GOntOpticalDdmTem:AVERAGE',
+			'DEF:GOntODdmBiasCurren=$database:GOntODdmBiasCurren:AVERAGE',
+			'AREA:GponOntODdmVoltage#2EFAE7:ONTVoltage',
+			'GPRINT:GponOntODdmVoltage:MIN:Min. %2.2lf\t',
+			'GPRINT:GponOntODdmVoltage:MAX:Max %2.2lf\t\n',
 
-			'LINE2:GponOntOptDdmTem#FFB813:ONTTemp',
-			'GPRINT:GponOntOptDdmTem:MIN:Min. %3.1lf\t',
-			'GPRINT:GponOntOptDdmTem:MAX:Max %3.1lf\t\n',
-      
-			'LINE2:GponOntDdmBiasCurr#001FFF:ONT Bias Current',
-			'GPRINT:GponOntDdmBiasCurr:LAST:Last. %3.1lf\t',
-			'GPRINT:GponOntDdmBiasCurr:MAX:Max %3.1lf\t\n',	
+			'LINE2:GOntOpticalDdmTem#FFB813:ONTTemp',
+			'GPRINT:GOntOpticalDdmTem:MIN:Min. %3.1lf\t',
+			'GPRINT:GOntOpticalDdmTem:MAX:Max %3.1lf\t\n',
+
+			'LINE2:GOntODdmBiasCurren#001FFF:ONT Bias Current',
+			'GPRINT:GOntODdmBiasCurren:LAST:Last. %3.1lf\t',
+			'GPRINT:GOntODdmBiasCurren:MAX:Max %3.1lf\t\n',
 		],
 		'small' => [
-			'DEF:GponOntOplDdmVolt=$database:GponOntOplDdmVolt:AVERAGE',
-			'DEF:GponOntOptDdmTem=$database:GponOntOptDdmTem:AVERAGE',
-			'DEF:GponOntDdmBiasCurr=$database:GponOntDdmBiasCurr:AVERAGE',
-			'AREA:GponOntOplDdmVolt#2EFAE7:ONTVoltage',
-			'GPRINT:GponOntOplDdmVolt:MIN:Min. %2.2lf\t',
-			'GPRINT:GponOntOplDdmVolt:MAX:Max %2.2lf\t\n',
+			'DEF:GponOntODdmVoltage=$database:GponOntODdmVoltage:AVERAGE',
+			'DEF:GOntOpticalDdmTem=$database:GOntOpticalDdmTem:AVERAGE',
+			'DEF:GOntODdmBiasCurren=$database:GOntODdmBiasCurren:AVERAGE',
+			'AREA:GponOntODdmVoltage#2EFAE7:ONTVoltage',
+			'GPRINT:GponOntODdmVoltage:MIN:Min. %2.2lf\t',
+			'GPRINT:GponOntODdmVoltage:MAX:Max %2.2lf\t\n',
 
-			'LINE2:GponOntOptDdmTem#FFB813:ONTTemp',
-			'GPRINT:GponOntOptDdmTem:MIN:Min. %3.1lf\t',
-			'GPRINT:GponOntOptDdmTem:MAX:Max %3.1lf\t\n',
-      
-			'LINE2:GponOntDdmBiasCurr#001FFF:ONT Bias Current',
-			'GPRINT:GponOntDdmBiasCurr:LAST:Last. %3.1lf\t',
-			'GPRINT:GponOntDdmBiasCurr:MAX:Max %3.1lf\t\n',	
+			'LINE2:GOntOpticalDdmTem#FFB813:ONTTemp',
+			'GPRINT:GOntOpticalDdmTem:MIN:Min. %3.1lf\t',
+			'GPRINT:GOntOpticalDdmTem:MAX:Max %3.1lf\t\n',
+
+			'LINE2:GOntODdmBiasCurren#001FFF:ONT Bias Current',
+			'GPRINT:GOntODdmBiasCurren:LAST:Last. %3.1lf\t',
+			'GPRINT:GOntODdmBiasCurren:MAX:Max %3.1lf\t\n',
 		]
 	}
 );
